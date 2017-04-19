@@ -25,3 +25,33 @@ $('#toggle-one').change(function() {
 
     });
 });
+
+$('#slider').change(function(){
+
+    var value = $('#slider').val();
+    console.log('aa'+value);
+    var data={};
+    data.value = value;
+    $.ajax({
+        url: '/hue/changeValue',
+        data:  JSON.stringify(data),
+        type : "POST",
+        contentType : "application/json",
+        statusCode: {
+            200: function() {
+
+                // you can even add a header with success message and toggle
+                // its display on success
+
+            },
+            error: function(error){
+
+            }
+        }
+
+    });
+});
+
+
+
+

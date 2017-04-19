@@ -7,7 +7,24 @@ exports.controlHue = function(req, res){
     var bridge = new Bridge();
     var data = req.body;
     console.log('here'+data.status);
-    bridge.getBridgeData(function(rs){
+    if(data.status=='true'){
+        bridge.setHueOn(function(rs){
+            console.log('rs'+rs);
+        });
+    }
+    else{
+        bridge.setHueOff(function(rs){
+            console.log('rs'+rs);
+        });
+    }
+
+};
+
+exports.controlHueLightValue = function(req, res){
+    var bridge = new Bridge();
+    var data = req.body;
+    console.log('here'+data.value);
+    bridge.changeHueValue(data.value,function(rs){
         console.log('rs'+rs);
     });
 

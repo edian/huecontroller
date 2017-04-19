@@ -26,6 +26,7 @@ app.get('/', function(req, res){
 
 
 app.post('/hue', hue.controlHue);
+app.post('/hue/changeValue', hue.controlHueLightValue);
 
 var port = app.get('port');
 var server = http.listen(port , function(){

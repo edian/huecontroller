@@ -4,20 +4,44 @@
     <meta charset="UTF-8">
     <title>Control Hue Light</title>
     <script src="/lib/jquery.min.js"></script>
+    <script src="/lib/bootstrap-slider.js"></script>
+
     <script type="application/javascript; version=1.7"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-
+    <link href="/css/bootstrap-slider.css" rel="stylesheet">
 </head>
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container" style="padding: 0">
-    <label class="checkbox-inline">
-        <input id="toggle-one" type="checkbox" checked data-toggle="toggle"> Switch
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            HUE
+        </div>
+    </div>
+    <p style="padding-left:100px;">Turn the hue on or down</p>
+    <label class="checkbox-inline" style="padding-left:110px;">
+        <input id="toggle-one" type="checkbox" checked data-toggle="toggle"/>
     </label>
 
-    <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="128" data-slider-id="GC" id="G" data-slider-tooltip="hide" data-slider-handle="round" />
+    <br/>
+    <br/>
+    <br/>
+    <p style="padding-left:100px;">Slide to change the light strength</p>
+    <div style="padding-left:100px;" >
+    <input  id = "slider"
+            type="text"
+            data-provide="slider"
+            data-slider-min="1"
+            data-slider-max="100"
+            data-slider-step="1"
+            data-slider-value="1"
+
+    />
+    </div>
+
 </div>
 
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
