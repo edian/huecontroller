@@ -39,13 +39,13 @@ $('#slider').change(function(){
         contentType : "application/json",
         statusCode: {
             200: function() {
-
+                console.log('success');
                 // you can even add a header with success message and toggle
                 // its display on success
 
             },
             error: function(error){
-
+                console.log('error');
             }
         }
 
