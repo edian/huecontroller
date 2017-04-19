@@ -96,7 +96,7 @@ class bridge {
                     id='2';
                     if(id){
                        // api = new HueApi(host, username);
-                        api.setLightState(id, state.on().brightness(value), function(err, result2) {
+                        api.setLightState(id, state.on().brightness(parseInt(value)), function(err, result2) {
 
                             if (err) throw err;
                             console.log('resulth'+result2);
